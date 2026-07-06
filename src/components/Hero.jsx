@@ -19,7 +19,7 @@ function Hero() {
         splitIndex={1}
         date="QUINTA CAMACHO · BOGOTÁ"
         scrollToExpand="Desliza para descubrir ↓"
-        decorationSrc="/logo-transparent.png"
+        decorationSrc={`${import.meta.env.BASE_URL}logo-transparent.png`}
       >
         <div className="hero-reveal">
           <span className="hero-tagline">Plant Based Fast Food</span>

@@ -30,7 +30,11 @@ function Header() {
       <div className={`container header-inner ${isScrolled ? 'is-scrolled' : ''}`}>
         <div className="header-left">
           <Link to="/" className="header-brand">
-            <img src="/logo-transparent.png" alt="Logo de ChapiYork" className="header-logo" />
+            <img
+              src={`${import.meta.env.BASE_URL}logo-transparent.png`}
+              alt="Logo de ChapiYork"
+              className="header-logo"
+            />
           </Link>
 
           <nav className="header-nav" aria-label="Navegación principal">
