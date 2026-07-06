@@ -53,12 +53,22 @@ function MenuItemCard({ item, index }) {
   )
 }
 
+function scrollToSection(event, slug) {
+  event.preventDefault()
+  document.getElementById(slug)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
+
 function CategoryNav({ categories }) {
   return (
     <nav className="menu-category-nav" aria-label="Categorías del menú">
       <div className="container menu-category-nav-inner">
         {categories.map((category) => (
-          <a key={category.slug} href={`#${category.slug}`} className="menu-category-chip">
+          <a
+            key={category.slug}
+            href={`#${category.slug}`}
+            className="menu-category-chip"
+            onClick={(event) => scrollToSection(event, category.slug)}
+          >
             {category.title}
           </a>
         ))}

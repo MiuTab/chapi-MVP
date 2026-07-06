@@ -48,7 +48,14 @@ function Hero() {
             >
               Pide por WhatsApp
             </a>
-            <a className="btn btn-brutal btn-ghost" href="#menu">
+            <a
+              className="btn btn-brutal btn-ghost"
+              href="#menu"
+              onClick={(event) => {
+                event.preventDefault()
+                document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              }}
+            >
               Ver el menú
             </a>
           </div>
