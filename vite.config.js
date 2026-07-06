@@ -91,6 +91,7 @@ function seoDataPlugin() {
 }
 
 export default defineConfig({
+  base: '/chapi-MVP/',
   plugins: [react(), seoDataPlugin()],
   resolve: {
     alias: {
